@@ -115,13 +115,13 @@ Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, S
 - AICPA/SOC (The American Institute of CPAs / System and Organizational Controls)
 
 #### Data Classification from International Organization for Standardization (ISO)
-  Company Confidential Data -> Client Confidential Data -> Proprietary/Internal Use -> Unrestricted/Public Use
+- Company Confidential Data -> Client Confidential Data -> Proprietary/Internal Use -> Unrestricted/Public Use
  
 #### Categories of Risk
 - Business Impact
 - Regulatory
 
-#### Forms of Risk
+#### Forms of Risk (v1)
 - Cyber security
 - Compliance
 - Reputational
@@ -131,7 +131,7 @@ Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, S
 - Technology
 
 #### Risk Management Process
- Identify -> Analyze and Assess -> Review Controls -> Mitigate 
+- Identify -> Analyze and Assess -> Review Controls -> Mitigate 
  
 #### De-risking Third and Fourth-Party Risks -> Improved agility and innovation
 - Lack of visibility
@@ -149,9 +149,19 @@ Core computing, mission-critical, regulatory issues, transform business, zero-tr
 - Operate with Agility
 - Safeguard Data
 
+### Migration Process (v1)
+- Assess -> Plan -> Migrate -> Validate
+
+### Workload Considerations (v1)
+- Security, compliance and regulations
+- Data latency
+- Complexity of hybrid and multicloud
+- Talent
+
 ### Lift and Shift
 - Modernize without changing
-- As-is	
+- As-is
+- Alternatives (v1): PaaS or SaaS migration
 
 ### The IBM Well-Architected Framework
 - Hybrid and Portable
@@ -167,6 +177,9 @@ Core computing, mission-critical, regulatory issues, transform business, zero-tr
 - Best Platform for the Workload
 
 ### IBM Cloud Tools to Support the Architecture
+ - Secure Landing Zone (SLZ)
+ - OnePipeline
+ - IBM Cloud Security and Compliance Center (SCC)
 
 #### Secure Landing Zone (SLZ): 
  - Management and Workload VPCs connected by a transit gateway
@@ -174,10 +187,10 @@ Core computing, mission-critical, regulatory issues, transform business, zero-tr
  - Virtual Server Instance (VSI)
  - Red Hat® OpenShift®  
 
-#### One Pipeline (Tekton)
- - Continuous Integration (CI): Develop applications
+#### OnePipeline (Tekton)
+ - Continuous Integration (CI): Develop applications (software development process)
  - Continuous Deployment (CD): Toolchain, DevSecOps
- - Continuous Compliance (CC)
+ - Continuous Compliance (CC): Security, compliance
  
 ## Module 4: Technical Solution Design
 
@@ -232,10 +245,12 @@ DevSecOps, continuous integration, code risk analyzer, IAM, nesting account grou
 - Enterprise-managed IAM
 
 ### IBM Cloud Enterprise Hierarchy
- Enterprise account -> Account groups -> Accounts -> Nested acct groups
+ Enterprise account -> Account groups -> Accounts -> Nested account groups
  
 ### Financial Services Validation
 - IBM Cloud for Financial Services Validated
+- Advantage to Bank
+- Advantage to ISV
 - OpenPages is used to collect evidence
 
 ### Requirements for Financial Services Validation
@@ -244,7 +259,7 @@ DevSecOps, continuous integration, code risk analyzer, IAM, nesting account grou
 - Non-prod treated as Prod
 - Isolate and separate functions
 - Protect the boundaries of the application
-- Execute all operator actions through a bastion host
+- Execute all operator actions through a Bastion host
 - Capture audit events
 - Follow secure development processes
 - Encrypt consumer data always: KYOK, TLS
@@ -265,6 +280,16 @@ DevSecOps, continuous integration, code risk analyzer, IAM, nesting account grou
 - Fewer parallel changes 
 - Fewer errors during system testing
 - Constantly updated systems against which to test
+- Controls, Checkpoint, Speed (v1)
+
+### DevOps Lifecycle (v1)
+- Planning -> Development -> Integration -> Deployment -> Operations -> Learning -> (back to start)
+
+### Code Risk Analyzer (CRA) (v1)
+- Quickly assess and remediate security and legal risks
+- CRA is provided as a set of Tekton tasks
+- Can be easily incorporated into delivery pipelines
+- Snyk (IBM partner)
 
 ## Module 6: Compliance, SLOs, and SLAs
 
