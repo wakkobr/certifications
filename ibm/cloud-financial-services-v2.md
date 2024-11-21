@@ -60,6 +60,24 @@ Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, S
 
 ### IMPLEMENT (HOW):
 
+#### Architecture Attributes (v1)
+- Isolation
+- Access Restriction
+- Encryption
+- Audit Logs and Compliance
+- High Availability / Disaster Recover
+- Management VPC
+- Workload VPC
+
+#### Architecture Capabilities (v1)
+- Management VPC: enable application provider to monitor, operate, maintain the environment
+- Workload VPC: provides compute, storage, and network services to support hosted applications
+
+#### Architecture Comparison (v1)
+- Virtual Server for VPC:  lift and shift for workloads running on virtual servers
+- VMWare: VMware virtualized workloads
+- Red Hat Openshift on IBM Cloud VPC: used to build new cloud-native applications, containers
+
 #### Enterprise Platform Experience (EPX)
 - Significantly reduced time to consumption (Deployable Architectures)
 - Ensured "secure by default" environments for critical workloads (Catalog)
@@ -72,9 +90,15 @@ Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, S
 - Confidential Containers
 - Confidential Databases
 
+#### IBM Cloud for Financial Services Validation (v1)
+- Over 200 security controls
+
 ### ASSESS (WHO):
 
 #### IBM Cloud Security and Compliance Center (SCC)
+- Daily, automatic compliance checks into development lifecycle
+- Analyzes client’s Cloud Security Posture (CSPM)
+- Enforces users least privilege (CIEM)
 
 #### Regulatory Authorities
 - NIST (The National Institute of Standards and Technology)
@@ -86,19 +110,28 @@ Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, S
 #### Financial Services Rules, Regulations, and Acts
 - GDPR (General Data Protection Regulation) EU
 - CCPA (California Consumer Privacy Act)
-- Sarbanes-Oxley Act (2002)
-- Dodd Frank and Gramm-Leach-Bliley Act
+- Sarbanes-Oxley Act (2002): corporate and criminal fraud
+- Dodd Frank and Gramm-Leach-Bliley Act: Financial Stability Oversight Counsel and the Consumer Financial Protection Bureau 
 - AICPA/SOC (The American Institute of CPAs / System and Organizational Controls)
 
-#### International Organization for Standardization (ISO)
+#### Data Classification from International Organization for Standardization (ISO)
   Company Confidential Data -> Client Confidential Data -> Proprietary/Internal Use -> Unrestricted/Public Use
  
-#### Forms of Risk
+#### Categories of Risk
 - Business Impact
 - Regulatory
 
+#### Forms of Risk
+- Cyber security
+- Compliance
+- Reputational
+- Operational
+- Transactional
+- Credit
+- Technology
+
 #### Risk Management Process
- Identify -> Analyze & Assess -> Review Controls -> Mitigate 
+ Identify -> Analyze and Assess -> Review Controls -> Mitigate 
  
 #### De-risking Third and Fourth-Party Risks -> Improved agility and innovation
 - Lack of visibility
