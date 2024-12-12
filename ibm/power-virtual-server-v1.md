@@ -57,7 +57,7 @@ RISC Processor, PowerVC, shared Storage Pool
 - SAP HANA: lower TCO - few cores to run workloads, consolidate servers, smaller footprint; RHEL and SLES
 
 ### Value Proposition of Shared Processor Pools (SPP)
-- Oracle Licensing Optimization: reduce licenses by limiting uncapped partitions/processors; can add licenses as needed
+- Oracle Licensing Optimization: reduce licenses by limiting uncapped partitions/processors; can add licenses as needed 
 - Reserve Capacity: capped price for later, saving OS licensing and memory costs
 
 ### Servers
@@ -67,7 +67,37 @@ RISC Processor, PowerVC, shared Storage Pool
 ## Module 3: Use Cases and Solutions for Power Virtual Server
 
 ### Keywords
+Modernize, BCP, Scale up/down, spin up/down, footprint, IBM Cloud Object Storage
+
+### Key Elements
+
+### Four Key Use Cases
+- Data Center Strategy Optimization
+- Business Continuity Planning
+- Modernize
+- Improve Operational Cost
+
+#### Data Center Strategy Optimization
+- SAP HANA on Power: superior core performance, BYOL
+- Oracle on Power: CPU sharing (SPP), can escalate
+- Red Hat on Power: OpenShift, modernize, automate, secure, reduce cost by reduce server, use existing hardware
+- IBM i: mission critical on cloud - reliability, security, performance; scalability and agility, no impact on workloads
+
+#### Modernize
+- Helping Clients Extend the Usefulness of Existing Infrastructure
+- Mission-critical workloads: extend on-premises to cloud, connect to IBM Cloud (API)
+- Software and hardware EoL/EoS: test new things, scale/spin up/down
+- Develop, upgrade and test software: pay-as-you-use
+- Deploying containers: containers or VMs, automation tools, muiticloud management
+
+#### Common Business Continuity Planning Use Cases
+- High Availability: shared resources
+- Disaster Recovery
+- Backup: many options (Compass - AIX, Linux; Cloud Object Storage; FalconStor; Veeam - AIX)
+
+## Module 4: Business Continuity Planning for Power Virtual Server
+
+### Keywords
 
 
 ### Key Elements
-- 
