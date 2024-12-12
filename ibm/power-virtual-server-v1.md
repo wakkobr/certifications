@@ -101,3 +101,18 @@ Modernize, BCP, Scale up/down, spin up/down, footprint, IBM Cloud Object Storage
 
 
 ### Key Elements
+- Backup Strategies and Methods
+- Disaster Recovery
+- High Availability
+- IBM PowerHA: DR/HA solution for AIX and IBM i
+- Geographic logical volume manager (GLVM): AIX DR solution
+- Geographic mirroring: IBM i DR solution
+
+### Resiliency Features
+- Images: FlashCopy, create master image template, 10 Tb max
+- Snapshots: backup LPAR, point-in-time, full copy of the volume or data, can only be used on the LPAR it was taken
+- Volume Clones: replica of the volume
+
+### Backup Methods
+- AIX Backup Strategies: COS, IBM Storage Protect, Veeam, Compass by Cobalt Iron
+- FalconStor StorSafe VTL: virtual tape library (VTL), > 2 Tb, on-premises and cloud
