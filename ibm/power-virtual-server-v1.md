@@ -1,4 +1,5 @@
 # IBM Power Cloud Virtual Server Course Notes
+Learning Plan: https://yourlearning.ibm.com/activity/PLAN-A7B2BFED5813?focuslmsId=ITS-DL70544G
 
 ## Module 1: Power Virtual Server Overview
 
