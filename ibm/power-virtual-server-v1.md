@@ -170,13 +170,13 @@ Open Virtualization Appliance (OVA), FalconStor Storsage VTL, BRMS, Aspera (FASP
 ## Module 6: Power Virtual Server Options
 
 ### Keywords
-IOPS, GDPR, SOC, Storage Pools
+IOPS, GDPR, SOC, Storage Pools, VLAN, VIOS, HPCS, Key Protect
 
 ### Key Elements
 - Input/output operation per second (IOPS)
 - Observability and Monitoring Options: can monitor platform metrics with IBM Cloud Monitoring dashboards
 - Storage Pools (SP): affinity (same SP), anti-affinity (diff SP), auto-select
-- Flexible IOPS
+- Flexible IOPS: more IOPS, higher the cost
 - Platform Metrics
 - Activity Tracker
 - IBM Cloud Monitoring Limitations: 5 minutes, IPv6, memory display at 100%
@@ -200,3 +200,33 @@ IOPS, GDPR, SOC, Storage Pools
 - GDPR
 - SOC (System Organization Controls)
 - Payment Card Industry (PCI) data security standards
+
+## Module 7: Networking Options for Power Virtual Server
+
+### Keywords
+Virtual Router Appliance (VRA), IPSec VPN, Transit Gateway, Direct Link
+
+### Key Elements
+- Workspace, Subnet & Gateway Appliances
+- Transit Gateway
+- Generic Routing Encapsulation (GRE): encapsulate data packets; traverse networks
+- Power Edge Router (PER): high performance router, improved UX, less complexity and cost
+- PER is replacing IBM Cloud Connections and Direct Link
+- PER connetion and transit gateway integrate IBM Power Virtual Server and IBM Cloud
+- Direct Link: connect on-premise/other cloud to IBM Cloud; highest speed
+
+### Power Virtual Server Networking Basics
+- Workspace: container for all instances; administrative unit
+- Subnets: will use for communication, creates a VLAN
+- Gateway Appliances: provide clients control over network traffic; increased security; policies and rules
+
+### Transit Gateway
+- Allows clients to interconnect various parts of IBM Cloud
+- Can also connect external resources in other clouds/on-premises via Direct Link
+
+### Connectivity Patterns
+- Limited Default Public Access over the Internet: temp access, no prod
+- On-Premises to Power Virtual Server using Direct Link and Transit Gateway: with or without Client-Managed Gateway
+- Site-to-Site Network Connection with IBM Cloud VPN Service
+- Site-to-Site Network Connection on Client-Managed Gateway in Classic
+- Site-to-Site Network Connection on Client-Managed Gateway (VPC and Bring Your Own License - BYOL)
