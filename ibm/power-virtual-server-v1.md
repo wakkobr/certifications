@@ -98,15 +98,16 @@ Modernize, BCP, Scale up/down, spin up/down, footprint, IBM Cloud Object Storage
 ## Module 4: Business Continuity Planning for Power Virtual Server
 
 ### Keywords
-
+HADR, FlashCopy, GLVM, Geographic mirroring, Snapshot, Compass, PowerHA, GRS, Image Captures, ROHA
 
 ### Key Elements
 - Backup Strategies and Methods
-- Disaster Recovery
+- Disaster Recovery: Recovery point objectives (RPOs) and recovery time objectives (RTOs) metrics
 - High Availability
 - IBM PowerHA: DR/HA solution for AIX and IBM i
-- Geographic logical volume manager (GLVM): AIX DR solution
-- Geographic mirroring: IBM i DR solution
+- Geographic logical volume manager (GLVM): AIX DR solution over TCP/IP
+- Geographic mirroring: IBM i DR solution, synchronous or asynchronous system replication
+- Storage Replication: Global Replication Service (GRS) is IBM Cloud service, asynchronous
 
 ### Resiliency Features
 - Images: FlashCopy, create master image template, 10 Tb max
@@ -115,4 +116,87 @@ Modernize, BCP, Scale up/down, spin up/down, footprint, IBM Cloud Object Storage
 
 ### Backup Methods
 - AIX Backup Strategies: COS, IBM Storage Protect, Veeam, Compass by Cobalt Iron
-- FalconStor StorSafe VTL: virtual tape library (VTL), > 2 Tb, on-premises and cloud
+- FalconStor StorSafe VTL: IBM i, virtual tape library (VTL), > 2 Tb, on-premises and cloud
+
+### IBM PowerHA
+- Disaster and HA solution forAIX and IBM i
+- Integrate with GLVM and Geographic mirroring
+- Supports resource optimization high availability (ROHA): automatically adjust CPUs and memory resources
+- Standard & Enterprise (uses Geographic mirroring) editions
+
+## Module 5: Migration Strategies for Power Virtual Server
+
+### Keywords
+Open Virtualization Appliance (OVA), FalconStor Storsage VTL, BRMS, Aspera (FASP)
+
+### Key Elements
+- OVA Images: needs access to PowerVC
+- PowerVC: virtualization management and cloud deployment tool
+- OVA image captured -> transported IBM COS -> imported Power Virtual Server -> new instance created
+
+### Migration Transfer Tools
+- TCP/IP: FTP, SFTP or SCP (Secure Copy Protocol)
+- Aspera-based Transfers to COS: FASP (Fast And Secure Protocol)
+
+### Migration Challenges and Considerations
+- Downtime Requirements
+- Workload
+- High Availability
+- Network Options
+- Replication or Mirroring Options
+- Familiarity and Comfort with Tools and Processes
+
+### Storage Options
+- IBM COS: Max 10 Tb
+- Seagate Lyve: transfers from on-premises to COS, then restores to Power Virtual Server
+- FalconStor Storsafe VTL
+
+### AIX
+- System Backup (mksysb and savevg) OR Application Backup
+- FTP/SFTP/SCP, IBM COS, Aspera OR Seagate Lyve
+- Restore rootvg (mksysb) OR Restore volume group (restvg)
+- Replication Strategy: Host/OS (PowerHA with GLVM), Application (Oracle Data Guard, Oracle GoldenGate, DB2 HADR), 3rd Party (Double-Take, MIMIX)
+
+### Optimal OVA Image Size for Data Transfer
+- IBM COS: Less than 2 Tb
+- Direct Transfer: over 2 Tb
+- FalconStor StoreSafe VTL: over 2 Tb
+
+### IBM i
+- Geographic mirroring: migrate from onpremises to Power Virtual Server in IBM Cloud
+- Replication Strategy: Host/OS (PowerHA with geographic mirroring), Application, 3rd Party (Maxava, MIMIX, Rocket iCluster, RobotHA)
+- BRMS: used to manage backup and recovery operations, automated backup and recovery management
+
+## Module 6: Power Virtual Server Options
+
+### Keywords
+IOPS, GDPR, SOC, Storage Pools
+
+### Key Elements
+- Input/output operation per second (IOPS)
+- Observability and Monitoring Options: can monitor platform metrics with IBM Cloud Monitoring dashboards
+- Storage Pools (SP): affinity (same SP), anti-affinity (diff SP), auto-select
+- Flexible IOPS
+- Platform Metrics
+- Activity Tracker
+- IBM Cloud Monitoring Limitations: 5 minutes, IPv6, memory display at 100%
+
+### Storage Options
+- Tier 0: up to 25 IOPS/Gb; ideal for high performance DBs (SAP HANA, Oracle) or workloads that benefit from higher storage performance
+- Tier 1: up to 10 IOPS/Gb; ideal for prod workloads with defined performance characteristics
+- Tier 3: up to 3 IOPS/Gb; ideal for non-production workloads
+- Fixed 5000 IOPS:  ideal where the highest performance is required for meeting specific workloads KPIs
+
+### Security for Power Virtual Server
+- IBM manages infrastructure (hypervisor and below)
+- Client manages OS
+- VLAN isolation: each client environment and subnet is deployed in a separate VLAN (Network Segregation/Segmentation
+
+### Integrating Power Virtual Server with IBM Cloud Key Management Services
+- IBM Cloud Hyper Protect Crypto Services (HPCS): dedicated key management service and hardware security module (HSM) in IBM Cloud
+- IBM Key Protect: multi-tenant encryption solution, allows data to be secured and encrypted stored in IBM Cloud
+
+### Power Virtual Server Regulatory Compliance
+- GDPR
+- SOC (System Organization Controls)
+- Payment Card Industry (PCI) data security standards
