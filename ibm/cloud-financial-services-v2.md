@@ -1,4 +1,5 @@
 # IBM Cloud for Financial Services Course Notes
+Learning Plan: https://yourlearning.ibm.com/activity/PLAN-249407FA5B1A
 
 ## Module 1: An Introduction to IBM Cloud for Financial Services
 
