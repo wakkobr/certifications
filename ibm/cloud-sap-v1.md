@@ -1,33 +1,27 @@
 # IBM Cloud SAP Course Notes
 Learning Plan: [https://cloud-prep.product-acquisition.dal.app.cirrus.ibm.com/training/cloud/cloud-prep/certifications/ibm-cloud-sap]
 
-## Module 1: An Introduction to IBM Cloud for Financial Services
+## Module 1: Overview
 
 ### Keywords
-Ecosystem, mission-critical, regulations, continuous monitoring, moving data
+IaaS, S4/HANA, ERP, RISE with SAP
 
-### Key Elements
-- Secure Transactions
-- Monitoring
-- Data Protection
-- Innovation Lab
+### Introduction to IBM and SAP
+- Over 50 years of partnership
+- SAP Notes - publications that contain information for implementing and managing SAP environments
 
-### Benefits of IBM Cloud for Financial Services
-- Addresses compliance needs
-- Facilitates speed and innovation
-- Safeguards data
-- Operates with agility everywhere
+### SAP Workloads on IBM Cloud
+- Infrastructure-as-a-Service (IaaS)
+- SAP workloads supported - ABAP and Java, on SAP NetWeaver or S4/HANA
+- Benefits - increased resiliency, easy access to AI, ML and IOT
+- SAP Business Applications - S4/HANA (ERP), BW/4HANA (EDW), SAP Business One (B1) (Small ERP)
+- Technical Applications - IBM Cloud Classic (Bare Metal, x86), IBM Cloud VPC, IBM Power Virtual Servers
+- Infrastructure - Intel Bare Metal, Intel Virtual, IBM Power Virtual, VMWare
+- RISE with SAP - assist SAP customers to move to cloud (Virtual Server for VPC, Power Systems Virtual Server)
+- IBM Breakthrough (RISE with SAP) - premium, IBM Cloud
 
-### Target Clients – Needs and Challenges
-- Banking
-- Insurance
-
-### Five Key Dimensions
-- Resiliency
-- Security
-- Compliance
-- Performance
-- Cost
+### Sizing SAP Workloads on IBM Cloud
+- 
 
 ## Module 2: Components, Risk, and Compliance
 
