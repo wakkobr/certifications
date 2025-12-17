@@ -120,3 +120,34 @@ data center exit, lift‑and‑shift, fresh implementation, mergers/acquisitions
 - Lift‑and‑shift data center exits move privately hosted SAP workloads quickly to modern hardware, shifting from CAPEX to OPEX and enabling capacity expansion.
 - S/4HANA migrations: Brownfield (full ECC conversion), Greenfield (new implementation), Bluefield (selective migration), and IBM Rapid Move (hybrid “pick‑and‑choose” acceleration).
 - Bluefield/Rapid Move approaches are recommended for ECC→S/4HANA on IBM Cloud, especially for selective carve‑outs in demergers or acquisitions.
+
+## Glossary ##
+
+### A ###
+AI Artificial Intelligence
+API Application Program Interface
+
+### B ###
+BYOL Bring Your Own License
+
+### E ###
+EDW Enterprise Data Warehouse
+ERP Enterprise Resource Planning
+
+### H ###
+HANA High-performance Analytic Applicance
+HEC HANA Enterprise Cloud
+
+### I ###
+IaaS Infrastructure as a Service
+I/O Input/Output
+IOPS Input/output operations per second
+
+### L ###
+LPARS Logical Partitions
+
+### S ###
+SAP System, Applications, and Products
+SAPS Standard Application Benchmarks
+SD Sales and Distribution
+VSI Virtual Server Instance
