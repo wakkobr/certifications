@@ -1,387 +1,121 @@
 # IBM Cloud SAP Course Notes
 Learning Plan: [https://cloud-prep.product-acquisition.dal.app.cirrus.ibm.com/training/cloud/cloud-prep/certifications/ibm-cloud-sap]
 
-## Module 1: Overview
-
-### Keywords
-IaaS, S4/HANA, ERP, RISE with SAP
-
-### Introduction to IBM and SAP
-- Over 50 years of partnership
-- SAP Notes - publications that contain information for implementing and managing SAP environments
-
-### SAP Workloads on IBM Cloud
-- Infrastructure-as-a-Service (IaaS)
-- SAP workloads supported - ABAP and Java, on SAP NetWeaver or S4/HANA
-- Benefits - increased resiliency, easy access to AI, ML and IOT
-- SAP Business Applications - S4/HANA (ERP), BW/4HANA (EDW), SAP Business One (B1) (Small ERP)
-- Technical Applications - IBM Cloud Classic (Bare Metal, x86), IBM Cloud VPC, IBM Power Virtual Servers
-- Infrastructure - Intel Bare Metal, Intel Virtual, IBM Power Virtual, VMWare
-- RISE with SAP - assist SAP customers to move to cloud (Virtual Server for VPC, Power Systems Virtual Server)
-- IBM Breakthrough (RISE with SAP) - premium, IBM Cloud
-
-### Sizing SAP Workloads on IBM Cloud
-- 
-
-## Module 2: Components, Risk, and Compliance
-
-### Keywords
-Define, Implement, Assess, Controls, EPX, KYOK, Confidential, NIST, GDPR, SCC, Sarbanes-Oaxley Act, Mitigate
-
-### Define-Implement-Assess Model
-- Define: controls, requirements
-- Implement: automate
-- Assess: monitor
-
-### IBM Cloud for Financial Services Framework
-- Originates from NIST 800-53
-
-### DEFINE (WHAT):
-
-#### Controls
-- Simplify Risk Management
-- Keep Controls Current
-- Make simpler to Provide Compliance
-- Real-time Monitoring
-
-#### Core Focus Areas
-- Active Monitoring and Response
-- Focused Risk Management and Compliance
-- Advanced Data Protection
-- Operational Excellence
-- Unified Infrastructure Security and Resilience
-- Enhanced Authentication and Access Management
-- Automated Application and Workload Protection
-
-### IMPLEMENT (HOW):
-
-#### Architecture Attributes (v1)
-- Isolation
-- Access Restriction
-- Encryption
-- Audit Logs and Compliance
-- High Availability / Disaster Recover
-- Management VPC
-- Workload VPC
-
-#### Architecture Capabilities (v1)
-- Management VPC: enable application provider to monitor, operate, maintain the environment
-- Workload VPC: provides compute, storage, and network services to support hosted applications
-
-#### Architecture Comparison (v1)
-- Virtual Server for VPC:  lift and shift for workloads running on virtual servers
-- VMWare: VMware virtualized workloads
-- Red Hat Openshift on IBM Cloud VPC: used to build new cloud-native applications, containers
-
-#### Enterprise Platform Experience (EPX)
-- Significantly reduced time to consumption (Deployable Architectures)
-- Ensured "secure by default" environments for critical workloads (Catalog)
-- Continuous assessments against compliance goals (SCC + DevOps)
-- Alignment of cloud to their business (Projects)
-
-#### IBM Cloud Hyper Protect Services / IBM Cloud Data Shield
-- Confidential Computing
-- Keep Your Own Key (KYOK)
-- Confidential Containers
-- Confidential Databases
-
-#### IBM Cloud for Financial Services Validation (v1)
-- Over 200 security controls
-
-### ASSESS (WHO):
-
-#### IBM Cloud Security and Compliance Center (SCC)
-- Daily, automatic compliance checks into development lifecycle
-- Analyzes client’s Cloud Security Posture (CSPM)
-- Enforces users least privilege (CIEM)
-
-#### Regulatory Authorities
-- NIST (The National Institute of Standards and Technology)
-- NYDFS (The New York Department of Financial Services)
-- OSFI (The Office of the Superintendent of Financial Institutions)
-- DORA (The Digital Operational Resilience Act) EU
-- EBA (The European Banking Authority) EU
-
-#### Financial Services Rules, Regulations, and Acts
-- GDPR (General Data Protection Regulation) EU
-- CCPA (California Consumer Privacy Act)
-- Sarbanes-Oxley Act (2002): corporate and criminal fraud
-- Dodd Frank and Gramm-Leach-Bliley Act: Financial Stability Oversight Counsel and the Consumer Financial Protection Bureau 
-- AICPA/SOC (The American Institute of CPAs / System and Organizational Controls)
-
-#### Data Classification from International Organization for Standardization (ISO)
-- Company Confidential Data -> Client Confidential Data -> Proprietary/Internal Use -> Unrestricted/Public Use
- 
-#### Categories of Risk
-- Business Impact
-- Regulatory
-
-#### Forms of Risk (v1)
-- Cyber security
-- Compliance
-- Reputational
-- Operational
-- Transactional
-- Credit
-- Technology
-
-#### Risk Management Process
-- Identify -> Analyze and Assess -> Review Controls -> Mitigate 
- 
-#### De-risking Third and Fourth-Party Risks -> Improved agility and innovation
-- Lack of visibility
-- Lack of control
-- Lack of understanding
-
-## Module 3: Customer Workload Environment
-
-### Keywords
-Core computing, mission-critical, regulatory issues, transform business, zero-trust, virtualized workloads, containers, controls, ecosystem, portable, confidential, SLZ, continuous compliance, automation
-
-### Application Migration and Modernization
-- Achieves Continuous Compliance
-- Accelerate Innovation
-- Operate with Agility
-- Safeguard Data
-
-### Migration Process (v1)
-- Assess -> Plan -> Migrate -> Validate
-
-### Workload Considerations (v1)
-- Security, compliance and regulations
-- Data latency
-- Complexity of hybrid and multicloud
-- Talent
-
-### Lift and Shift
-- Modernize without changing
-- As-is
-- Alternatives (v1): PaaS or SaaS migration
-
-### The IBM Well-Architected Framework
-- Hybrid and Portable
-- Resiliency
-- Efficient Operations
-- Security and Compliance
-- Performance
-- Financial Operations and Sustainability
-
-### Design Principles for the Well-Architected Framework
-- Automate Operations
-- Respect Data Gravity
-- Best Platform for the Workload
-
-### IBM Cloud Tools to Support the Architecture
- - Secure Landing Zone (SLZ)
- - OnePipeline
- - IBM Cloud Security and Compliance Center (SCC)
-
-#### Secure Landing Zone (SLZ): 
- - Management and Workload VPCs connected by a transit gateway
- - Virtual Private Cloud (VPC):  Flow log collector created
- - Virtual Server Instance (VSI)
- - Red Hat® OpenShift®  
-
-#### OnePipeline (Tekton)
- - Continuous Integration (CI): Develop applications (software development process)
- - Continuous Deployment (CD): Toolchain, DevSecOps
- - Continuous Compliance (CC): Security, compliance
- 
-## Module 4: Technical Solution Design
-
-### Keywords
-Satellite, key management, FIPS level 4, OpenShift, block storage
-
-### Reference Architectures
-- IBM Cloud VPC
-- IBM Cloud Satellite
-- IBM Cloud for VMware Regulated Workloads
-
-### IBM Cloud Virtual Private Cloud (VPC)
-- Logical Isolation: Subnets, scalability, security
-- Quick instance provisioning with high performance: virtual server instances
-- Multi-architecture images: different operating systems
-- Storage capabilities: block storage
-- External connectivity
-- Security: security groups (virtual firewalls), ACLs
-- High Availability: region (VPC is deployed), which contain zones (logically isolated data centers), multiple zones
-- Classic access: IBM Cloud Classic, Direct Link
-
-### IBM Cloud VPC Options
-- IBM Cloud Virtual Servers for VPC: virtual servers, 3 zones in one MZR
-- Red Hat® OpenShift® on IBM Cloud: containers, 1 zone
-
-### IBM Cloud Satellite
-- Flexible infrastructure options
-- Growing catalog of services and software
-- Consistent operations experience
-- Security across locations
-
-### Architecture Building Blocks: Hub and Spoke Pattern
-- Workload VPC: keeps data isolated, Virtual Private Endpoint
-- Management VPC: network segment is shared, bastion server
-- Edge/transit VPC: all communication pass, internal to external, On-premises data center or Point of Presence (POP)
-
-### Financial Services Cloud Hyper Protect Crypto Services (HPCS)
-- Key management & encryption
-- Unified key orchestrator
-- KYOK
-- FIPS 140-2 level 4
-
-## Module 5: Implementation Considerations
-
-### Keywords
-DevSecOps, continuous integration, code risk analyzer, IAM, nesting account groups, OpenPages, KYOK, TLS, industry informed framework, risk-averse
-
-### IBM Cloud Enterprise Account Management
-- Centralized account management
-- Consolidated subscription billing
-- Top-down usage reporting
-- Enterprise-managed IAM
-
-### IBM Cloud Enterprise Hierarchy
- Enterprise account -> Account groups -> Accounts -> Nested account groups
- 
-### Financial Services Validation
-- IBM Cloud for Financial Services Validated
-- Advantage to Bank
-- Advantage to ISV
-- OpenPages is used to collect evidence
-
-### Requirements for Financial Services Validation
-- Approved architecture
-- System of account and access management: zero-trust environment
-- Non-prod treated as Prod
-- Isolate and separate functions
-- Protect the boundaries of the application
-- Execute all operator actions through a Bastion host
-- Capture audit events
-- Follow secure development processes
-- Encrypt consumer data always: KYOK, TLS
-- Design for high availability
-- BCP and DR
-- Monitor for security and compliance
-
-### Toolchains
-- DevOps tools are integrated into toolchains
-- Integration of capabilities
-
-### Continuous Integration & Benefits
-- New code integrated at least 1/day
-- Automated testing
-- Progress for improved feedback
-- Early error detection and metrics
-- Improved team collaboration
-- Fewer parallel changes 
-- Fewer errors during system testing
-- Constantly updated systems against which to test
-- Controls, Checkpoint, Speed (v1)
-
-### DevOps Lifecycle (v1)
-- Planning -> Development -> Integration -> Deployment -> Operations -> Learning -> (back to start)
-
-### Code Risk Analyzer (CRA) (v1)
-- Quickly assess and remediate security and legal risks
-- CRA is provided as a set of Tekton tasks
-- Can be easily incorporated into delivery pipelines
-- Snyk (IBM partner)
-
-## Module 6: Compliance, SLOs, and SLAs
-
-### Keywords
-CDR, CIEM, CWP, CSPM, Cloud Support Tiers, SLA, SLO, automation, controls, workload protection, cyberstrong
-
-### Five Dimensions
-- Security
-- Compliance
-- Performance
-- Cost
-- Risk
-
-### Overview of IBM Security Compliance Center (SCC)
-- Controls
-- Policies
-- Automation and integration
-- Workload protection
-- Remediation and response
-
-### SCC's Key Capabilities
-- Continuous Compliance and Risk Posture
-- Cloud Detection and Response (CDR)
-- Cloud Infrastructure Entitlement Management (CIEM)
-- Cloud Workload Protection (CWP)
-- Automation and Integration
-- Cloud Security Posture Management (CSPM)
-- Data Protection and Encryption
-- Support for 3rd/4th Party Risk Management
-
-### Importance for Financial Services Industry
-- Manage security and compliance while managing risk and compliance requirements
-- Monitor compliance and create audit reports
-- High volume simulations
-- Saves times and cost through automation and controls
-
-### SLA Availability Tiers
-- Default (Standard): single instance, single data center
-- Hardened Configuration: 2 instances (redundancy)
-- Regional HA (High Availability): 3 sets on 3 zones
-- Multi-Regional HA: 2 or more regions
-
-### IBM Cloud Support Tiers
-- Basic: basic protection
-- Advanced: prioritized ticket handling (Production Workloads)
-- Premium: high value client engagement (Business Critical/Complex Workloads)
-   
-   
-  
-## Glossary
-
-### A
-- **aaS**: as a Service
-- **ACLs**: Access Control Lists
-- **API**: Application Programming Interface
-
-### C
-- **CDR**: Cloud Detection and Response
-- **CIEM**: Cloud Infrastructure Entitlement Management
-- **CSP**: Cloud Service Provider
-- **CSPM**: Cloud Security Posture Management
-- **CWP**: Cloud Workload Protection
-
-### F
-- **FI**: Financial Institutions
-
-### H
-- **HA**: High Availability
-- **HPCS**: Hyper Protect Crypto Services
-
-### I
-- **IAM**: Identity Access Management
-- **ISV**: Independent Software Vendors
-
-### K
-- **KYOK**: Keep Your Own Key
-
-### M
-- **MZR**: Multizone Region
-
-### P
-- **POP**: Point of Presence
-
-### S
-- **SaaS**: Software as a Service
-- **SCC**: Security and Compliance Center
-- **SI**: Systems Integrator
-- **SLAs**: Service Level Agreements
-- **SLOs**: Service Level Objectives
-- **SLZ**: Secure Landing Zone
-- **SOC**: System and Organizational Controls
-
-### T
-- **TAM**: Technical Account Manager
-- **TLS**: Transport Layer Security
-
-### V
-- **VPC**: Virtual Private Cloud
-- **VPE**: Virtual Private Endpoint
-- **VSI**: Virtual Server Instance
+## Section 1 – Overview
+
+**Keywords:** SAP basics, IBM Cloud, SAP workloads, sizing, SAP HANA, NetWeaver, IaaS, SAPS, Quick Sizer
+
+- SAP Basics: SAP terminology; business vs technical applications; SAP HANA, NetWeaver, S4HANA, BW4HANA, Business One; IBM–SAP 50-year partnership; SAP Notes; IBM Cloud for SAP benefits (agility, scalability, security, AI/analytics integration).
+- SAP Workloads on IBM Cloud: SAP components (ABAP/Java, NetWeaver, S4HANA, BW4HANA); SAP-certified IaaS options (Intel bare metal, VPC virtual servers, Power VS, VMware SDDC); supported OS and DB platforms; RISE with SAP and BREAKTHROUGH with IBM.
+- Sizing SAP Workloads: SAPS benchmarks; SAP SD benchmark; SAP Quick Sizer; logical design and 99.99 uptime; sizing based on throughput, users, HA/DR, integrated systems; CPU/memory/storage/network considerations.
+
+***
+
+## Section 2 – Architecture
+
+**Keywords:** SAP architecture, IBM Cloud Classic, VPC, Power VS, OLTP, OLAP, scale up, scale out, SAP certification, BYOL, OS support
+
+- Introduction to SAP Architecture: SAP-certified IaaS environments (Classic, VPC, Power VS); bare metal, classic VS, VMware, VPC VS; Power enterprise components; migration steps (size, define landscape, connect, install, license); OLTP vs OLAP; scaling up vs scaling out.
+- SAP Certified: Meaning of SAP-certified hardware; SAP Portal and SAP Notes; BYOL for SAP and OS; SAP HANA and NetWeaver only on certified servers; SAP-certified IBM Cloud solutions (Bare Metal, VPC VS, Power VS, VMware Solutions Dedicated); supported OS for HANA and NetWeaver (RHEL, SLES, Windows, AIX).
+
+***
+
+## Section 3 – Compute and Storage
+
+### 3.1 Compute Considerations
+
+**Keywords:** compute profiles, bare metal, VPC VS, Power VS, VMware Dedicated, SAPS, Optane, sizing principles
+
+- Compute Profiles: vCPU/RAM/bandwidth combinations; SAP-certified platforms: Bare Metal Classic, VPC Intel VS, Power VS, VMware Dedicated.
+- Bare Metal: Single-tenant; large HANA servers; cheaper storage; backbone replication; Intel Optane Persistent Memory; not recommended for NetWeaver app servers.
+- VMware Dedicated: Single-tenant; ~10% capacity overhead; VCS (automated SDDC) vs VSS (manual vSphere); consolidate multiple SAP components; VMware HA for S4HANA.
+- Virtual Server for VPC: Cost-effective for small systems; shut down at night/weekends to reduce cost; good for NetWeaver servers.
+- Power Systems Virtual Servers: Best for big enterprise workloads; balanced/memory/ultra-high-memory profiles; high SAPS; scale CPU/RAM up to 8x without LPAR restart; HANA only on E980 with Linux.
+
+
+### 3.2 Storage Considerations
+
+**Keywords:** block storage, file storage, object storage, IOPS, throughput, RTO, storage tiers, custom IOPS, RAID10
+
+- Storage Overview: Units (MB, GB, TB); IOPS as main performance metric; throughput MB/s; RTO depends on IOPS and HANA DB size.
+- Provisioning: Storage tiers (0.25/2/4/10 IOPS/GB) vs custom IOPS; examples of 2 TB with 5 or 10 IOPS/GB; custom IOPS higher cost, higher performance for small volumes.
+- Platform Storage Options:
+    - Bare Metal: Network block/file; 4 or 10 IOPS/GB.
+    - VMware: Local SSD in RAID10 for HANA; 10 IOPS/GB network storage for HANA; ≥4 IOPS/GB for NetWeaver.
+    - VPC VS: Block Storage Tier 1 (10 IOPS/GB) for HANA; Tier 3 (3 IOPS/GB) default.
+    - Power VS: Tier 1 block storage with fiber attach for HANA.
+
+
+### 3.2 Data Migration
+
+**Keywords:** lift-and-shift, migration, homogeneous, heterogeneous, SWPM, HSR, DMO, backup/restore, HCX, rsync, image conversion
+
+- Migration Approaches:
+    - Lift-and-shift (infrastructure change only).
+    - Migration with version/config change (application, DB, OS).
+- Homogeneous vs Heterogeneous:
+    - Homogeneous: same OS/DB; methods include VSI backup/restore, DB backup/restore, fresh build + copy, replication tools.
+    - Heterogeneous: different OS/DB; SAP export/import, standard DMO, two-step migration, colocation options.
+- Infrastructure-Specific Methods: Rackware RMM for Bare Metal; VMware HCX and lift-and-shift SDDC; Classic to VPC via rsync or image conversion (VMDK/VHD); Power VS via SWPM, HSR, DMO, native backup/restore, Rapid Move, COS; no block-level tools for SAP.
+
+
+### 3.2 Backup Strategies
+
+**Keywords:** snapshots, VPC, Power VS backups, Backint, HANA Cockpit, HANA Studio, Veeam, Spectrum Protect, COS
+
+- Power VS Backups: Capture/export AIX/IBMi VSIs to COS; images stored as block volumes.
+- HANA Backup Methods: Backint interface for online backups with certified tools; offline file-level backups of DB and logs; tools: HANA Cockpit, HANA Studio.
+- Snapshots for VPC: Block snapshots via IBM Cloud Backup for VPC; scheduled (daily/weekly/monthly); max 10 TB; data encrypted in transit and at rest in COS; snapshots independent from source volume; incremental after first full.
+- Veeam \& Spectrum Protect: Veeam Backup \& Replication on Bare Metal or Classic VS; Backint-based HANA backups; Endurance block storage repository; incremental backups of changed blocks. Spectrum Protect with Backint; BUFFSIZE parameter controls buffer size.
+
+***
+
+## Section 4 – Network and Security
+
+### 4.1 Network Considerations
+
+**Keywords:** VLAN, subnet, Direct Link, Transit Gateway, VPC routing, VPN, latency, throughput
+
+- Networking Basics: Components, topology, performance, latency, ports; segregation with VLANs/subnets; importance for SAP traffic flows.
+- Bare Metal \& VMware: Direct Link between Classic and Power VS; PCI/VLAN NICs on Bare Metal; Transit Gateways for frequent data transfer and hybrid workloads.
+- Virtual Servers (VPC): VPC routing tables for local VPC-to-VPC flows; VPN gateway, Internet gateways; BYOIP process starts with creating a VPC.
+- Power VS: Connectivity with IBM Cloud Infrastructure via Direct Link; considerations for hybrid network design.
+
+
+### 4.2 Security Considerations
+
+**Keywords:** network isolation, firewalls, ACLs, security groups, HANA zones, BYOIP, encryption, KMS, Hyper Protect Crypto, Endurance encryption, edge clusters
+
+- Security Concerns: Network isolation for SAP systems; best practices in VPC, Classic, VMware; limiting access to HANA; IPs for security; firewall rules and ports between HANA and NetWeaver; ACLs and security groups for subnet protection.
+- Security at the Edge: Edge computing; edge clusters (Kubernetes-based, scalable); benefits (scalability, faster insight, secure communication, availability); VMware Edge Services Cluster option; IBM Security Services for SAP (consulting, best practices, risk mitigation).
+- Data Encryption Options:
+    - IBM-managed encryption: default for IBM Block Storage; IBM Cloud Endurance native encryption for full NFS volume.
+    - Client-managed encryption: requires Key Management Service; BYOK/KYOK.
+    - Hyper Protect Crypto Service: strong assurance no one can access client SAP data.
+    - VMware encryption options.
+
+***
+
+## Section 5 – Architecture Patterns
+
+**Keywords:** high availability, disaster recovery, system tiering, NetWeaver, SPOF, WSFC, SAP HANA HSR, latency, compliance, STAR registry, automation, Schematics, Terraform, Ansible, bastion, SAP kits
+
+### 5.1.1 High Availability
+
+- System Tiering: Two-tier, three-tier, multi-tier designs; HA and DR separation; NetWeaver AS variants (ABAP, Java, Dual Stack).
+- NetWeaver HA: SPOFs (DBMS, central services); failover clustering (e.g. WSFC) to protect SPOFs; shared storage via NFS and mount points; VMware vMotion to reduce planned downtime.
+- HANA HA/DR: OS add-ons (RHEL, SLES) for HA; HANA System Replication (synchronous vs asynchronous; delta shipping vs log replay); standby DB and storage; latency KPIs (RTT); S4HANA scale-out up to 4 nodes; BW4HANA scale-out for analytics.
+
+
+### 5.1.2 Regulatory Requirements
+
+- Compliance Programs: Global, government, industry, regional; examples: GDPR, EBA, FFIEC, FISC, GxP, HIPAA, HYTRUST.
+- STAR Registry: Options IBM Cloud Infrastructure and IBM Cloud Platform; mapping of SAP deployments to appropriate compliance programs.
+- Program Types: Regional vs industry programs for SAP on IBM Cloud; cross-over for government deployments requiring both global and regional compliance.
+
+
+### 5.1.3 Automation
+
+- Automation Tools: IBM Cloud Schematics; Terraform; Ansible; Red Hat OpenShift and ROKS; Operators, Helm; VPC VSIs and Power VS resources.
+- Bastion Server: Jump server for remote installation; used for SAP VPC automated solutions; runs Terraform `remote-exec` and Ansible playbooks.
+- SAP Kits \& Terraform: SAP kits as grouped products; GitHub Terraform/Ansible repositories per SAP solution; steps: adjust variables (`terraform.tfvars`, `input.auto.tfvars`), plan, verify, apply; do not modify resources via Dashboard.
