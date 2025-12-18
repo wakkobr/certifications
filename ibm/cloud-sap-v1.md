@@ -146,8 +146,19 @@ IOPS Input/output operations per second
 ### L ###
 LPARS Logical Partitions
 
+### O ###
+OLAP Online Analytical Processing
+OLTP Online Transaction Processing
+
 ### S ###
 SAP System, Applications, and Products
 SAPS Standard Application Benchmarks
 SD Sales and Distribution
+SDDC Software-defined data center
+SLES SUSE Linux Enterprise Server
+
+### V ###
+VCS vCenter Server
+VPC Virtual Private Cloud
 VSI Virtual Server Instance
+VSS VMware vSphere
